@@ -53,4 +53,14 @@ Para Deploy en Heroku  ver -->  ue_Deploy-Heroku_paso-a-paso.md
      + Ver paso a paso del Deploy en: ue_Deploy-Heroku_paso-a-paso.md
      .
 [4/8/19 Noche - FIN]
-     
+
+[10/8/19 LRI]
+1- Se sube el contenido del proyecto Juguetes en VM DS2018 (NB LRI) a GitHub en un Repositorio 
+    de la organization UTNLRI --> https://github.com/utnlri/juguetes
+    Ver documentación de lo realizado en Evernote: "UTDC008 - DS Spring 2019::Programar Caso Juguete"
+2- Se conecta el deploy en Heroku de dsappjuguetes a Github usando repositorio https://github.com/utnlri/juguetes
+     Para que funcione fue necesario asignar permiso a HerokuDashboard en la organziation UTNLRI de Github, ver 
+       en: "UTNLRI \ Settings \ Third-party Access "  https://github.com/organizations/utnlri/settings/oauth_application_policy 
+     Ver documentación de lo realizado en Evernote: "UTDC008 - DS Spring 2019::Programar Caso Juguete"
+3- Agregar en home.html link a código fuente en Github
+[10/8/19 FIN]
