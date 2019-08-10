@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Caso Juguetes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    	
+	
+    <h1>Caso de Uso Listar Juguetes</h1>
+    <p>Fuera de Alcance del Enunciado --> Se usa para ver los pedidos registrados </p>
+    <div th:if="${colPedidos.empty}" class="alert alert-warning">
+			No se encontraron pedidos registrados.
+    </div>
+    <div th:if="${!colPedidos.empty}" class="alert alert-warning">
+			Lista de Pedidos Realizados : 
+    </div>
+     <div class="form-group">
+				  <table class="table table-hover table-striped">
+				    <thead>
+				      <tr>
+				      	<th>idPedido</th>
+				      	<th>Fecha</th>				      	
+				      	<th>Nombre Cliente</th>
+				        <th>Apellido Cliente</th>
+				      	<th>Descripcion</th>
+				        <th>Precio</th>				        
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr th:each="p: ${colPedidos}">
+				       <td align="center" th:text="${p.getIdPedido()}"></td>				       
+					   <td  th:text="${p.getFecha()}"></td>				       					  
+				       <td  th:text="${p.getCliente().getNombre()}"></td>				       					  
+				       <td  th:text="${p.getCliente().getApellido()}"></td>				       					  
+				       <td width="30%"    th:text="${p.getJuguete().getDescripcion()}"></td>
+					   <td align="right"  th:text="${p.getJuguete().getPrecio()}"></td>	
+				       
+					</tr>
+				    </tbody>
+				  </table>
+				   
+			  </div>
+			  
+			  <p><p><a href="/" class="btn btn-default" role="button">Volver</a></p></p>
+			  
+			  
+		
+</body>
+</html>

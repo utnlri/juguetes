@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Caso Juguetes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="#" id="form" th:action="@{/seleccionarJuguete}" method="post" class="form-inline">    	
+	
+    <h1>Caso de Uso Pedir Juguetes</h1>
+    <p>Evento 1 - Buscar Juguetes</p>
+    <div th:if="${colJuguetes.empty}" class="alert alert-warning">
+			No se encontraron juguetes disponibles.
+    </div>
+    <div th:if="${!colJuguetes.empty}" class="alert alert-warning">
+			Lista de Juguetes Disponibles : 
+    </div>
+     <div class="form-group">
+				  <table class="table table-hover table-striped">
+				    <thead>
+				      <tr>
+				      	<th>idJuguete</th>
+				      	<th>Descripcion</th>
+				        <th>Precio</th>				        
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr th:each="j : ${colJuguetes}">
+				       <td align="center" th:text="${j.getIdJuguete()}"></td>				       
+					   <td width="50%"    th:text="${j.getDescripcion()}"></td>
+					   <td align="right"  th:text="${j.getPrecio()}"></td>	
+				      <td><input type="radio" id="idJuguete" name="idJuguete" th:value="${j.getIdJuguete()}" required="true"></input></td>				   		   
+					   
+					</tr>
+				    </tbody>
+				  </table>
+				   
+			  </div>
+			  <p><p><input th:if="${!colJuguetes.empty}" type="submit" value="Enviar" class="btn btn-primary"/> 
+			        <a href="/" class="btn btn-default" role="button">Volver</a>
+			  </p></p>
+	</form>
+	
+	
+		
+</body>
+</html>
