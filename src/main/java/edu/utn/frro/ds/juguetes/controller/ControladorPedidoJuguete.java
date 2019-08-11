@@ -44,7 +44,7 @@ public class ControladorPedidoJuguete {
 		//l_pedido.setIdPedido(12L); //Por motivos de DEBUG
 		pDao.save(l_pedido); // Graba el pedido, y el DAO le asigna el ID
 		
-		model.addAttribute("mensaje", "Mostrando datos del juguete elegido");		
+		model.addAttribute("mensaje", "Mostrando datos del juguete elegido");	// Este mensaje no está en el enunciado. Se coloca por si hay que hacer algún debug	
 		model.addAttribute("juguete", l_juguete);  // Carga el juguete elegido al modelo
 		model.addAttribute("cActual", cActual);    // Carga el cliente actual al modelo
 		model.addAttribute("pedido", l_pedido);    // Carga el cliente actual al modelo

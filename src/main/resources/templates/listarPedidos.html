@@ -1,4 +1,10 @@
 <!DOCTYPE HTML>
+<!-- listarPedidos.html ==> muestra el listado de Pedidos registrados con el C.U. Pedir Juguetes
+     Esta vista no está en el enunciado, porque el enunciado incluye solamente el C.U. Pedir Juguete (punto 1 del menu)      
+    [LRI 10/8/19]
+    Modif #1 - Se agrega color a la leyenda "Fuera de Alcance ..." y formato a las fechas del listado
+    [LRI 10/8/19]   -->
+
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Caso Juguetes</title>
@@ -8,12 +14,12 @@
     	
 	
     <h1>Caso de Uso Listar Juguetes</h1>
-    <p>Fuera de Alcance del Enunciado --> Se usa para ver los pedidos registrados </p>
+    <p><span style="color:red"> Fuera de Alcance del Enunciado --> Se usa para ver los pedidos registrados </span></p>  <!-- Modif #1 - Se agrega tag span -->	
     <div th:if="${colPedidos.empty}" class="alert alert-warning">
 			No se encontraron pedidos registrados.
     </div>
     <div th:if="${!colPedidos.empty}" class="alert alert-warning">
-			Lista de Pedidos Realizados : 
+			<b><u>Lista de Pedidos Realizados :</u></b> 
     </div>
      <div class="form-group">
 				  <table class="table table-hover table-striped">
@@ -30,7 +36,7 @@
 				    <tbody>
 				      <tr th:each="p: ${colPedidos}">
 				       <td align="center" th:text="${p.getIdPedido()}"></td>				       
-					   <td  th:text="${p.getFecha()}"></td>				       					  
+					   <td  th:text="${#dates.format(p.getFecha(), 'dd-MM-yyyy HH:mm ')}"></td>	 <!-- Modif #1 Se agrega #dates.format( -->			       					  
 				       <td  th:text="${p.getCliente().getNombre()}"></td>				       					  
 				       <td  th:text="${p.getCliente().getApellido()}"></td>				       					  
 				       <td width="30%"    th:text="${p.getJuguete().getDescripcion()}"></td>

@@ -1,20 +1,16 @@
 <!DOCTYPE HTML>
+<!-- confirmacion.html ==> muestra la confirmación del pedido (con los campos de acuerdo al enunciado del C.U.)
+    [LRI 10/8/19]   -->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Caso Juguetes</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-       <h1>Caso de Uso Pedir Juguetes</h1>
-       <p>Evento 2 - Juguete Elegido</p>
-       <p th:text="'Mensaje : ' + ${mensaje} + '!'" />
+       <h1>Caso de Uso Pedir Juguete</h1>
+       <h2>Evento 2 - Juguete Elegido</h2>
+       <p th:text="'Mensaje : ' + ${mensaje} + '!'" /> <!-- Este mensaje no está en el enunciado. Se coloca por si hay que hacer algún debug --> 
        <p></p> 
-       <p>-      ID Pedido: <span th:text="${pedido.getIdPedido()}"/>  </p>
-       <p>-      Fecha: <span th:text="${pedido.getFecha()}"/>  </p>
-       <p>-      Cli en Ped: <span th:text="${pedido.getCliente().getIdCliente()}"/>  </p>
-       <p>-      Jug en Ped: <span th:text="${pedido.getJuguete().getIdJuguete()}"/>  </p>
-       <p></p> 
-       <p>-      ID Cliente: <span th:text="${cActual.getIdCliente()}"/>  </p>
        <p>-      Apellido: <span th:text="${cActual.getApellido()}"/>  </p>
        <p>-      Nombre: <span th:text="${cActual.getNombre()}"/>  </p>
        <p></p> 

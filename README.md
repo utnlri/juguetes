@@ -3,8 +3,12 @@
 
 ## Ver Notas desarrollo LRI --> ue_DOCUMENTACION.md
 
-## ------------ Completar luego este README con instrucciones sobre cómo instalar y ejecutar este proyecto, al estilo del README.md que tiene el proyecto RRHH realizado por Ignacio Paz ---------------
+## Para ejecutar la aplicación Caso Juguetes
+1. Botón derecho sobre JuguetesApplication.java \ Run as \ Java Application   
+2. En chrome URL: http://localhost:8080/ --> Esto mapea al Menú pcial que corresponde al home.html       
 
+## Ejecutar en Heroku [Web] 
+URL de la APP: https://dsappjuguetes.herokuapp.com/  
 ## Como ver la base de datos H2
 Para ver la consola de la base de datos [H2](http://www.h2database.com/) de la aplicación:
 1. En el brower ir a: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
