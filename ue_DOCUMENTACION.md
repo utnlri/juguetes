@@ -73,3 +73,15 @@ Para Deploy en Heroku  ver -->  ue_Deploy-Heroku_paso-a-paso.md
 7- En la view listarPedidos.html, se agrega color a la frase "Fuera de Alcance ...", y formato a las fechas  
 8- Se acomoda formato de Preview en README.md, ue_DOCUMENTACION.md y ue_Deploy-Heroku_paso-a-paso.md  
 [10/8/19 FIN]  
+
+[8/9/19 LRI]
+1. GMODIF#1 - Se agrega Ejemplo programación Var Instancia:
+ Modificar:
+   + home.html
+ Agregar:
+    + ControladorEjemplosProgramacion.java --> @RequestMapping("/ingresarVarInstancia")
+    + ingresarVarInstancia.html
+    + confirmaVarInstancia.html
+    + mostrarVarInstancia.html
+[8/9/19 FIN]
+

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<!-- GMODIF#1-  ingresarVarInstancia.html ==> View para ejemplos Programación Var. Instancia
+    Esta view no está en el enunciado, se agrega para poder motsrar ejemplos utilizando una var. de instancia en el Controller
+    [LRI 8/9/19]   -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Caso Juguetes - Ejemplos Programación</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Ingresar Variable Instancia</h1>
+	<form action="#" id="form" th:action="@{/setearVariable}" method="post" class="form-inline"> 
+                             <!-- "@{/setearVariable}" ==> indica el URL que se invocará al Submitir el form,
+                                  el mismo debe ser PostMapping a asociar al método del controlador del evento 2  
+                              -->	
+	
+    <p>Ingrese un String : <input type="text"  name="valorTexto"   required="true"/> 
+    </p>
+    <input type="submit" value="Enviar" class="btn btn-primary"/> 
+</form>
+</body>
+</html>

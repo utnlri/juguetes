@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<!-- GMODIF#1-  mostrarVarInstancia.html ==> View para consultar el valor de  la variable de Instancia
+    [LRI 8/9/19]   -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Caso Juguetes - Ejemplos Programación</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Mostrar valor Variable Instancia</h1>
+	 <p th:text="'Mensaje : ' + ${mensaje} + '!'" /> <!-- Este mensaje se coloca por si hay que hacer algún debug --> 
+      
+    <u>Valor de var. Instancia String :</u>
+    <b><p  th:text=" ${varInstanciaString}" /> </b>
+    <p></p>
+    <p><p><a href="/" class="btn btn-default" role="button">Volver al Inicio</a></p></p>
+</body>
+</html>
